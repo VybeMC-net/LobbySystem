@@ -4,9 +4,9 @@ main: net.vybemc.lobbysystem.LobbySystem
 api-version: 1.8
 author: DiesesFloo
 commands:
-  fly:
-    usage: /fly [player]
-    description: Toggle fly mode
   build:
     usage: /build [player]
     description: Toggle building mode
+  play:
+    usage: /play [gamemode]
+    description: Play a gamemode
