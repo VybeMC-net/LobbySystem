@@ -1,6 +1,7 @@
 package net.vybemc.lobbysystem;
 
 import net.vybemc.lobbysystem.commands.BuildCommand;
+import net.vybemc.lobbysystem.commands.PlayCommand;
 import net.vybemc.lobbysystem.events.BuildBreakListener;
 import net.vybemc.lobbysystem.events.InventoryClickListener;
 import net.vybemc.lobbysystem.events.JoinListener;
@@ -30,6 +31,7 @@ public final class LobbySystem extends JavaPlugin {
     private void registerCommands() {
 
         getCommand("build").setExecutor(new BuildCommand());
+        getCommand("play").setExecutor(new PlayCommand());
 
     }
 
