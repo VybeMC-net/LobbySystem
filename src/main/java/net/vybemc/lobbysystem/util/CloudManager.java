@@ -1,6 +1,7 @@
 package net.vybemc.lobbysystem.util;
 
 import de.dytanic.cloudnet.driver.CloudNetDriver;
+import de.dytanic.cloudnet.driver.provider.service.GeneralCloudServiceProvider;
 import de.dytanic.cloudnet.ext.bridge.node.CloudNetBridgeModule;
 import de.dytanic.cloudnet.ext.bridge.player.ICloudPlayer;
 import de.dytanic.cloudnet.ext.bridge.player.IPlayerManager;
@@ -19,6 +20,12 @@ public class CloudManager {
 
     public int getMaxPlayersOnNetwork(){
         return BridgeServerHelper.getMaxPlayers();
+    }
+
+    public int getCurrentPlayersOnNetwork(){
+        IPlayerManager playerManager = CloudNetDriver.getInstance().getServicesRegistry().getFirstService(IPlayerManager.class);
+        return playerManager.getOnlineCount();
+        CloudNetwo
     }
 
 }
