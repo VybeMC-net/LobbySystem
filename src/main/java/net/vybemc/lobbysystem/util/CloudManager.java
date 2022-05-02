@@ -25,7 +25,6 @@ public class CloudManager {
     public int getCurrentPlayersOnNetwork(){
         IPlayerManager playerManager = CloudNetDriver.getInstance().getServicesRegistry().getFirstService(IPlayerManager.class);
         return playerManager.getOnlineCount();
-        CloudNetwo
     }
 
 }
