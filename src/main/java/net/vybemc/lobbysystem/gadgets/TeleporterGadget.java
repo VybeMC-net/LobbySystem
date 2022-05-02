@@ -8,6 +8,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.util.Vector;
 
 public class TeleporterGadget implements Listener {
 
@@ -28,12 +29,16 @@ public class TeleporterGadget implements Listener {
                                 p.teleport(loc);
                             }
                         }else {
-
+                            Location loc = p.getLocation();
+                            Vector dir = loc.getDirection();
+                            dir.normalize();
+                            dir.multiply(7);
+                            loc.add(dir);
+                            p.teleport(loc)
                         }
                     }
                 }
             }
         }
     }
-
 }
