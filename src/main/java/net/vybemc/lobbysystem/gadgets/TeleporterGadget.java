@@ -34,7 +34,7 @@ public class TeleporterGadget implements Listener {
                             dir.normalize();
                             dir.multiply(7);
                             loc.add(dir);
-                            p.teleport(loc)
+                            p.teleport(loc);
                         }
                     }
                 }
