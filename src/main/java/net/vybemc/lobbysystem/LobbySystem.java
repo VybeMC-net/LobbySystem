@@ -6,6 +6,7 @@ import net.vybemc.lobbysystem.events.BuildBreakListener;
 import net.vybemc.lobbysystem.events.InventoryClickListener;
 import net.vybemc.lobbysystem.events.JoinListener;
 import net.vybemc.lobbysystem.events.QuitListener;
+import net.vybemc.lobbysystem.gadgets.TeleporterGadget;
 import net.vybemc.lobbysystem.inventories.NavigatorInventory;
 import net.vybemc.lobbysystem.util.BuildersManager;
 import net.vybemc.lobbysystem.util.CloudManager;
@@ -45,6 +46,7 @@ public final class LobbySystem extends JavaPlugin {
 
         pm.registerEvents(new BuildersManager(), this);
         pm.registerEvents(new NavigatorInventory(), this);
+        pm.registerEvents(new TeleporterGadget(), this);
     }
 
     private void registerInstances() {
