@@ -4,6 +4,7 @@ import de.dytanic.cloudnet.driver.CloudNetDriver;
 import de.dytanic.cloudnet.ext.bridge.node.CloudNetBridgeModule;
 import de.dytanic.cloudnet.ext.bridge.player.ICloudPlayer;
 import de.dytanic.cloudnet.ext.bridge.player.IPlayerManager;
+import de.dytanic.cloudnet.ext.bridge.server.BridgeServerHelper;
 import org.bukkit.entity.Player;
 
 public class CloudManager {
@@ -14,6 +15,10 @@ public class CloudManager {
         if (cloudPlayer != null){
             playerManager.getPlayerExecutor(cloudPlayer).connect(serviceName);
         }
+    }
+
+    public int getMaxPlayersOnNetwork(){
+        return BridgeServerHelper.getMaxPlayers();
     }
 
 }
