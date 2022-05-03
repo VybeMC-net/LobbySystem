@@ -2,10 +2,7 @@ package net.vybemc.lobbysystem;
 
 import net.vybemc.lobbysystem.commands.BuildCommand;
 import net.vybemc.lobbysystem.commands.PlayCommand;
-import net.vybemc.lobbysystem.events.BuildBreakListener;
-import net.vybemc.lobbysystem.events.InventoryClickListener;
-import net.vybemc.lobbysystem.events.JoinListener;
-import net.vybemc.lobbysystem.events.QuitListener;
+import net.vybemc.lobbysystem.events.*;
 import net.vybemc.lobbysystem.gadgets.TeleporterGadget;
 import net.vybemc.lobbysystem.inventories.NavigatorInventory;
 import net.vybemc.lobbysystem.util.BuildersManager;
@@ -44,6 +41,7 @@ public final class LobbySystem extends JavaPlugin {
         pm.registerEvents(new QuitListener(), this);
         pm.registerEvents(new BuildBreakListener(), this);
         pm.registerEvents(new InventoryClickListener(), this);
+        pm.registerEvents(new InteractListener(), this);
 
         pm.registerEvents(new BuildersManager(), this);
         pm.registerEvents(new NavigatorInventory(), this);
