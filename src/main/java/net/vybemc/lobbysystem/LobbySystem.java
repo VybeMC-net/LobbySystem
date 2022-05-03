@@ -26,6 +26,7 @@ public final class LobbySystem extends JavaPlugin {
 
         registerInstances();
         registerCommands();
+        registerListeners();
 
     }
 
