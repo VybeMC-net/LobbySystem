@@ -1,3 +1,4 @@
+net\vybemc\lobbysystem\util\ActionBar$1.class
 net\vybemc\lobbysystem\util\ItemBuilder$Lore.class
 net\vybemc\lobbysystem\gadgets\TeleporterGadget.class
 net\vybemc\lobbysystem\util\CloudManager.class
@@ -15,3 +16,4 @@ net\vybemc\lobbysystem\util\StringUtils.class
 net\vybemc\lobbysystem\commands\BuildCommand.class
 net\vybemc\lobbysystem\events\InteractListener.class
 net\vybemc\lobbysystem\commands\PlayCommand.class
+net\vybemc\lobbysystem\util\ActionBar.class
