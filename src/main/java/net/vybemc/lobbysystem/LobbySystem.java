@@ -5,6 +5,7 @@ import net.vybemc.lobbysystem.commands.PlayCommand;
 import net.vybemc.lobbysystem.events.*;
 import net.vybemc.lobbysystem.gadgets.TeleporterGadget;
 import net.vybemc.lobbysystem.inventories.NavigatorInventory;
+import net.vybemc.lobbysystem.util.ActionBar;
 import net.vybemc.lobbysystem.util.BuildersManager;
 import net.vybemc.lobbysystem.util.CloudManager;
 import net.vybemc.lobbysystem.util.InventoryManager;
@@ -24,6 +25,8 @@ public final class LobbySystem extends JavaPlugin {
         registerInstances();
         registerCommands();
         registerListeners();
+
+        new ActionBar("§e§lNEW §8» §7Lobby System Alpha Release");
 
     }
 
