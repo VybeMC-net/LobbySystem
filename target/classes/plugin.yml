@@ -1,0 +1,12 @@
+name: LobbySystem
+version: '1.0-SNAPSHOT'
+main: net.vybemc.lobbysystem.LobbySystem
+api-version: 1.8
+author: DiesesFloo
+commands:
+  build:
+    usage: /build [player]
+    description: Toggle building mode
+  play:
+    usage: /play [gamemode]
+    description: Play a gamemode
