@@ -13,4 +13,5 @@ net\vybemc\lobbysystem\util\InventoryManager.class
 net\vybemc\lobbysystem\LobbySystem.class
 net\vybemc\lobbysystem\util\StringUtils.class
 net\vybemc\lobbysystem\commands\BuildCommand.class
+net\vybemc\lobbysystem\events\InteractListener.class
 net\vybemc\lobbysystem\commands\PlayCommand.class
