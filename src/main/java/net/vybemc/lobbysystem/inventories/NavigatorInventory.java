@@ -23,10 +23,7 @@ public class NavigatorInventory implements Listener {
             ItemStack item = e.getCurrentItem();
             String inventoryName = e.getInventory().getName();
 
-            p.sendMessage("§8>>" + inventoryName.replaceAll("§", "&") + "§8<<");
-
             if (inventoryName.endsWith("Main menu")){
-                p.sendMessage("OMG It's the main menu");
                 if(item.getType() == Material.BED){
                     cloudManager.sendPlayer(p, "bedwars");
                 }else if(item.getType() == Material.SANDSTONE) {
