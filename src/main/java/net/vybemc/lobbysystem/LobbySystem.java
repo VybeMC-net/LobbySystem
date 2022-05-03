@@ -18,6 +18,7 @@ public final class LobbySystem extends JavaPlugin {
     private BuildersManager buildersManager;
     private InventoryManager inventoryManager;
     private CloudManager cloudManager;
+    private ActionBar actionBar;
 
     @Override
     public void onEnable() {
@@ -26,7 +27,12 @@ public final class LobbySystem extends JavaPlugin {
         registerCommands();
         registerListeners();
 
-        new ActionBar("§e§lNEW §8» §7Lobby System Alpha Release");
+    }
+
+    @Override
+    public void onDisable() {
+
+        actionBar.setRunning(false);
 
     }
 
@@ -57,6 +63,7 @@ public final class LobbySystem extends JavaPlugin {
         buildersManager = new BuildersManager();
         inventoryManager = new InventoryManager();
         cloudManager = new CloudManager();
+        actionBar = new ActionBar("§e§lNEW §8» §7Lobby System Alpha Release");
 
     }
 
