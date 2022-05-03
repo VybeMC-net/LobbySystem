@@ -26,12 +26,16 @@ public class PlayCommand implements CommandExecutor {
                 switch (mode){
                     case "bedwars":
                         cloudManager.sendPlayer(p, "bedwars");
+                        break;
                     case "skywars":
                         cloudManager.sendPlayer(p, "skywars");
+                        break;
                     case "buildffa":
                         cloudManager.sendPlayer(p, "buildffa");
+                        break;
                     default:
                         p.sendMessage(StringUtils.getLobbyPrefix() + "This gamemode wasn't found.");
+                        break;
 
                 }
 
