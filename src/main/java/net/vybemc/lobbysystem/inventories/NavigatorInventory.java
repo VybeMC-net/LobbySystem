@@ -25,7 +25,7 @@ public class NavigatorInventory implements Listener {
 
             p.sendMessage("§8>>" + inventoryName.replaceAll("§", "&") + "§8<<");
 
-            if (inventoryName == "§7Navigator §8» §7Main menu"){
+            if (inventoryName.endsWith("Main menu")){
                 if(item.getType() == Material.BED){
                     cloudManager.sendPlayer(p, "bedwars");
                 }else if(item.getType() == Material.SANDSTONE) {
