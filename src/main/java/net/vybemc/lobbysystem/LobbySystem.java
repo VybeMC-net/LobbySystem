@@ -59,6 +59,7 @@ public final class LobbySystem extends JavaPlugin {
         pm.registerEvents(new TeleporterGadget(), this);
 
         CloudNetDriver.getInstance().getEventManager().registerListener(new GroupUpdateListener());
+        CloudNetDriver.getInstance().getEventManager().registerListener(new NetworkJoinListener());
     }
 
     private void registerInstances() {
