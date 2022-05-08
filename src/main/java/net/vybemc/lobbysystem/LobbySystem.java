@@ -1,5 +1,6 @@
 package net.vybemc.lobbysystem;
 
+import de.dytanic.cloudnet.driver.CloudNetDriver;
 import net.vybemc.lobbysystem.commands.BuildCommand;
 import net.vybemc.lobbysystem.commands.PlayCommand;
 import net.vybemc.lobbysystem.events.*;
@@ -55,6 +56,8 @@ public final class LobbySystem extends JavaPlugin {
         pm.registerEvents(new BuildersManager(), this);
         pm.registerEvents(new NavigatorInventory(), this);
         pm.registerEvents(new TeleporterGadget(), this);
+
+        CloudNetDriver.getInstance().getEventManager().registerListener(new GroupUpdateListener());
     }
 
     private void registerInstances() {
