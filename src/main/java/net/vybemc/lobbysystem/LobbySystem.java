@@ -5,10 +5,7 @@ import net.vybemc.lobbysystem.commands.PlayCommand;
 import net.vybemc.lobbysystem.events.*;
 import net.vybemc.lobbysystem.gadgets.TeleporterGadget;
 import net.vybemc.lobbysystem.inventories.NavigatorInventory;
-import net.vybemc.lobbysystem.util.ActionBar;
-import net.vybemc.lobbysystem.util.BuildersManager;
-import net.vybemc.lobbysystem.util.CloudManager;
-import net.vybemc.lobbysystem.util.InventoryManager;
+import net.vybemc.lobbysystem.util.*;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -19,6 +16,8 @@ public final class LobbySystem extends JavaPlugin {
     private InventoryManager inventoryManager;
     private CloudManager cloudManager;
     private ActionBar actionBar;
+    private CloudPermsUtils cloudPermsUtils;
+    private ScoreboardUtils scoreboardUtils;
 
     @Override
     public void onEnable() {
@@ -64,6 +63,9 @@ public final class LobbySystem extends JavaPlugin {
         buildersManager = new BuildersManager();
         inventoryManager = new InventoryManager();
         cloudManager = new CloudManager();
+        cloudPermsUtils = new CloudPermsUtils();
+        scoreboardUtils = new ScoreboardUtils();
+
         actionBar = new ActionBar("§e§lNEW §8» §7Lobby System Alpha Release");
 
     }
@@ -82,5 +84,13 @@ public final class LobbySystem extends JavaPlugin {
 
     public CloudManager getCloudManager() {
         return cloudManager;
+    }
+
+    public CloudPermsUtils getCloudPermsUtils() {
+        return cloudPermsUtils;
+    }
+
+    public ScoreboardUtils getScoreboardUtils() {
+        return scoreboardUtils;
     }
 }
