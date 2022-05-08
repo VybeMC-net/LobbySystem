@@ -5,6 +5,7 @@ import de.dytanic.cloudnet.driver.event.events.permission.PermissionUpdateUserEv
 import net.vybemc.lobbysystem.LobbySystem;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
@@ -15,34 +16,28 @@ public class ScoreboardUtils {
 
     public void setScoreboard(Player p){
 
-        if (p.getScoreboard() == Bukkit.getScoreboardManager().getMainScoreboard()){
-            p.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
-        }
-
-        Scoreboard sb = p.getScoreboard();
-
-        if (sb.getObjective("display") != null){
-            sb.getObjective("display").unregister();
-        }
-
+        Scoreboard sb = Bukkit.getScoreboardManager().getNewScoreboard();
         Objective obj = sb.registerNewObjective("display", "dummy");
 
-        obj.setDisplayName("§6§lVybeMC");
+        obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+        obj.setDisplayName("§6§lVybe§f§lMC");
 
-        obj.getScore(" ").setScore(6);
-        obj.getScore("§7Rank:").setScore(5);
+        obj.getScore("§8§m------------------ ").setScore(6);
+        obj.getScore("§6§lRank:").setScore(5);
         obj.getScore("§0").setScore(4);
-        obj.getScore("§7Server:").setScore(3);
-        obj.getScore(LobbySystem.getPlugin().getCloudManager().getServer(p)).setScore(2);
-        obj.getScore("§8§m----------").setScore(1);
+        obj.getScore("§6§lServer:").setScore(3);
+        obj.getScore("§8» §f" + LobbySystem.getPlugin().getCloudManager().getServer(p)).setScore(2);
+        obj.getScore("§8§m------------------").setScore(1);
         obj.getScore("§7§oVybeMC.net").setScore(0);
 
 
         Team rank = getTeam(sb, "rank");
         rank.addEntry("§0");
-        rank.setPrefix("§7Rank: "
-                + cloudPermsUtils.getColor(p)
+        rank.setPrefix("§8» "
+                + cloudPermsUtils.getTranslatedColor(p)
                 + cloudPermsUtils.getRank(p));
+
+        p.setScoreboard(sb);
 
     }
 
@@ -51,8 +46,8 @@ public class ScoreboardUtils {
 
         Team rank = getTeam(sb, "rank");
         rank.addEntry("§0");
-        rank.setPrefix("§7Rank: "
-                + cloudPermsUtils.getColor(p)
+        rank.setPrefix("§8» "
+                + cloudPermsUtils.getTranslatedColor(p)
                 + cloudPermsUtils.getRank(p));
     }
 
