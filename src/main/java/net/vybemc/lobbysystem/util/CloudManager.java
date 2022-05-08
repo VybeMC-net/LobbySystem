@@ -27,4 +27,12 @@ public class CloudManager {
         return playerManager.getOnlineCount();
     }
 
+    public String getServer(Player p){
+        IPlayerManager playerManager = CloudNetDriver.getInstance().getServicesRegistry().getFirstService(IPlayerManager.class);
+        ICloudPlayer cloudPlayer = playerManager.getOnlinePlayer(p.getUniqueId());
+
+        assert cloudPlayer != null;
+        return cloudPlayer.getConnectedService().getServerName();
+    }
+
 }
