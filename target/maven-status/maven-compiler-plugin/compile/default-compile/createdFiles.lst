@@ -4,6 +4,9 @@ net\vybemc\lobbysystem\gadgets\TeleporterGadget.class
 net\vybemc\lobbysystem\util\CloudManager.class
 net\vybemc\lobbysystem\util\BuildersManager.class
 net\vybemc\lobbysystem\events\JoinListener.class
+net\vybemc\lobbysystem\events\DamageListener.class
+net\vybemc\lobbysystem\util\ScoreboardUtils.class
+net\vybemc\lobbysystem\events\GroupUpdateListener.class
 net\vybemc\lobbysystem\events\InventoryClickListener.class
 net\vybemc\lobbysystem\events\QuitListener.class
 net\vybemc\lobbysystem\util\ItemBuilder$1.class
@@ -14,6 +17,7 @@ net\vybemc\lobbysystem\util\InventoryManager.class
 net\vybemc\lobbysystem\LobbySystem.class
 net\vybemc\lobbysystem\util\StringUtils.class
 net\vybemc\lobbysystem\commands\BuildCommand.class
+net\vybemc\lobbysystem\util\CloudPermsUtils.class
 net\vybemc\lobbysystem\events\InteractListener.class
 net\vybemc\lobbysystem\commands\PlayCommand.class
 net\vybemc\lobbysystem\util\ActionBar.class
