@@ -29,12 +29,13 @@ public class ScoreboardUtils {
 
         obj.setDisplayName("§6§lVybeMC");
 
-        obj.getScore(" ");
-        obj.getScore("§0");
-        obj.getScore("§7Server: §6"
-                + LobbySystem.getPlugin().getCloudManager().getServer(p));
-        obj.getScore("§8§m----------");
-        obj.getScore("§7§oVybeMC.net");
+        obj.getScore(" ").setScore(6);
+        obj.getScore("§7Rank:").setScore(5);
+        obj.getScore("§0").setScore(4);
+        obj.getScore("§7Server:").setScore(3);
+        obj.getScore(LobbySystem.getPlugin().getCloudManager().getServer(p)).setScore(2);
+        obj.getScore("§8§m----------").setScore(1);
+        obj.getScore("§7§oVybeMC.net").setScore(0);
 
 
         Team rank = getTeam(sb, "rank");
