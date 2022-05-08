@@ -19,6 +19,7 @@ public final class LobbySystem extends JavaPlugin {
     private ActionBar actionBar;
     private CloudPermsUtils cloudPermsUtils;
     private ScoreboardUtils scoreboardUtils;
+    private LevelBarUtils levelBarUtils;
 
     @Override
     public void onEnable() {
@@ -68,6 +69,7 @@ public final class LobbySystem extends JavaPlugin {
         cloudManager = new CloudManager();
         cloudPermsUtils = new CloudPermsUtils();
         scoreboardUtils = new ScoreboardUtils();
+        levelBarUtils = new LevelBarUtils();
 
         actionBar = new ActionBar("§e§lNEW §8» §7Lobby System Alpha Release");
 
@@ -95,5 +97,9 @@ public final class LobbySystem extends JavaPlugin {
 
     public ScoreboardUtils getScoreboardUtils() {
         return scoreboardUtils;
+    }
+
+    public LevelBarUtils getLevelBarUtils() {
+        return levelBarUtils;
     }
 }
