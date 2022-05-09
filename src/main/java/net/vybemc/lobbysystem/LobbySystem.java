@@ -53,6 +53,8 @@ public final class LobbySystem extends JavaPlugin {
         pm.registerEvents(new InventoryClickListener(), this);
         pm.registerEvents(new InteractListener(), this);
         pm.registerEvents(new DamageListener(), this);
+        pm.registerEvents(new DropListener(), this);
+        pm.registerEvents(new CollectListener(), this);
 
         pm.registerEvents(new BuildersManager(), this);
         pm.registerEvents(new NavigatorInventory(), this);
